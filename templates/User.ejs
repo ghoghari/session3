@@ -1,0 +1,293 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            border: 2px solid #333;
+        }
+
+        th,
+        td {
+            border: 1px solid #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 8px 12px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>Winning Number</th>
+            <th>Amount</th>
+            <th>Add</th>
+        </tr>
+        <tr>
+            <td>
+                <select id="input1" name="car">
+                    <option value="">Please Choose Winning Number</option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                </select>
+            </td>
+            <td>
+                <input type="number" id="input2" placeholder="Bet Amount" name="BetAmount" value="">
+            </td>
+            <td>
+                <button onclick="submitRow()">Submit</button>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        function submitRow() {
+            var number1 = document.getElementById("input1").value;
+            var number2 = document.getElementById("input2").value;
+            if (number1 && number2) {
+                console.log(number1);
+                console.log(number2);
+            }
+        }
+    </script>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Table</title>
+    <style>
+        body {
+            text-align: center;
+            padding: 40px 0;
+            background: #EBF0F5;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: #88B04B;
+            font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+            font-weight: 900;
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #404F5E;
+            font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+            font-size: 20px;
+            margin: 0;
+        }
+
+        i {
+            color: #9ABC66;
+            font-size: 100px;
+            line-height: 200px;
+            margin-left: -15px;
+        }
+
+        .card {
+            background: white;
+            padding: 60px;
+            border-radius: 4px;
+            box-shadow: 0 2px 3px #C8D0D8;
+            display: inline-block;
+            margin: 0 auto;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            border: 2px solid #333;
+        }
+
+        th,
+        td {
+            border: 1px solid #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 8px 12px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="success-container" style="display: none;">
+        <div class="card">
+            <div style="border-radius:200px; height:200px; width:200px; background: #F8FAF5; margin:0 auto;">
+                <i class="checkmark">✓</i>
+            </div>
+            <h1>Success</h1>
+            <p>We received your purchase request;<br /> we'll be in touch shortly!</p>
+        </div>
+    </div>
+
+    <div class="table-container" id="table-container">
+        <table>
+            <tr>
+                <th>Winning Number</th>
+                <th>Amount</th>
+                <th>Add</th>
+            </tr>
+            <tr>
+                <td>
+                    <select id="input1">
+                        <option value="">Please Choose Winning Number</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="input2" placeholder="Bet Amount" value="">
+                </td>
+                <td>
+                    <button onclick="submitRow()">Submit</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        function submitRow() {
+            var number1 = document.getElementById("input1").value;
+            var number2 = document.getElementById("input2").value;
+            if (number1 && number2) {
+                const url = 'http://localhost:5000/';
+                const data = {
+                    BetNumber: number1,
+                    BetAmount: number2
+                };
+
+                fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                })
+                    .then(response => response.json())
+                    .then(result => {
+                        console.log('Response:', result);
+                        showSuccessMessage();
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                    });
+            }
+        }
+
+        function showSuccessMessage() {
+            const successContainer = document.getElementById('success-container');
+            successContainer.style.display = 'block';
+            const tableContainer = document.getElementById('table-container');
+            tableContainer.style.display = 'none';
+
+            setTimeout(() => {
+                successContainer.style.display = 'none';
+                tableContainer.style.display = 'block';
+            }, 1000);
+        }
+    </script>
+</body>
+
+</html>

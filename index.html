@@ -1,0 +1,348 @@
+<html lang="en" data-dpr="1" style="font-size: 42.6667px;">
+
+<head>
+    <title>TP GOLD</title>
+    <script src="https://ydqp.uuy.com/Static/Home/images/share/assets/scripts/rem.js"></script>
+    <style>
+        html {
+            line-height: 1.15;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        main {
+            display: block;
+        }
+
+        a {
+            background-color: transparent;
+        }
+
+        img {
+            border-style: none;
+        }
+
+        button,
+        input {
+            font-family: inherit;
+            font-size: 100%;
+            line-height: 1.15;
+            margin: 0;
+        }
+
+        button,
+        input {
+            overflow: visible;
+        }
+
+        button {
+            text-transform: none;
+        }
+
+        button {
+            -webkit-appearance: button;
+        }
+
+        button::-moz-focus-inner {
+            border-style: none;
+            padding: 0;
+        }
+
+        button:-moz-focusring {
+            outline: 1px dotted ButtonText;
+        }
+
+        ::-webkit-file-upload-button {
+            -webkit-appearance: button;
+            font: inherit;
+        }
+
+        body {
+            max-width: 7.5rem;
+            margin: 0 auto;
+            background-color: #000000;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        input,
+        button,
+        a {
+            -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+        }
+
+        .Imgclass {
+            width: 100%;
+            display: block;
+        }
+
+        main {
+            position: relative;
+        }
+
+        .wrapper {
+            position: absolute;
+            top: 4.5rem;
+            left: 0;
+            width: 100%;
+        }
+
+        .inner {
+            margin-top: 1.62rem;
+            width: 100%;
+            height: 3.42rem;
+        }
+
+        .actions {
+            position: relative;
+            text-align: center;
+        }
+
+        #Form {
+            width: 6.48rem;
+            margin: -0.9rem auto;
+            background-color: transparent;
+            border-radius: .1rem;
+            overflow: hidden;
+        }
+
+        #success {
+            width: 6.36rem;
+            margin: 0 auto;
+            padding-top: .48rem;
+        }
+
+        .form-item {
+            position: relative;
+            width: 100%;
+            height: 1rem;
+            line-height: 1.2rem;
+            font-size: 0;
+        }
+
+        .form-item:last-child {
+            border-bottom: none;
+        }
+
+        .icon {
+            position: absolute;
+            top: 50%;
+            left: .24rem;
+            transform: translateY(-50%);
+        }
+
+        #IconImg {
+            display: inline-block;
+            vertical-align: middle;
+            width: .34rem;
+            margin: 0;
+        }
+
+        .IdInput {
+            display: inline-block;
+            vertical-align: middle;
+            width: 100%;
+            padding: 0;
+            padding-left: .8rem;
+            font-size: .3rem;
+            color: #9a9a9a;
+            border: 0;
+            outline: 0;
+            box-sizing: border-box;
+            height: 100%;
+        }
+
+        #phone {
+            padding-right: 1.8rem;
+        }
+
+        #otp {
+            position: absolute;
+            top: .24rem;
+            right: .2rem;
+            width: 1.52rem;
+            height: .68rem;
+            line-height: .68rem;
+            border: 0;
+            outline: 0;
+            background-color: transparent;
+            border-radius: .32rem;
+            color: #b6a218;
+            font-size: .3rem;
+        }
+
+        .btn {
+            display: block;
+            width: 7.2rem;
+            height: 1.31rem;
+            margin: -0.7rem auto .2rem;
+            background-color: transparent;
+            outline: none;
+            border: none;
+            text-indent: -999rem;
+        }
+    </style>
+</head>
+
+<body style="font-size: 12px;">
+
+    <a id="downloadLink" style="display: none;" href="https://down-ydqp.uuy.com/download/TPGO_share_V0314.apk"
+        download="your_file_name.apk"></a>
+
+    <main>
+        <a><img src="Frame2.png" alt="bg" class="Imgclass"></a>
+        <div class="wrapper">
+            <div>
+                <div class="inner">
+                    <form id="Form">
+                        <div class="form-item">
+                            <span class="icon pass-icon">
+                                <img src="user.png" id="IconImg" style="width: .23rem;height: auto;" class="Imgclass">
+                            </span>
+                            <input type="text" placeholder="Username" name="Username" class="IdInput" id="Username">
+                        </div>
+                        <div class="form-item">
+                            <span class="icon pass-icon">
+                                <img src="phone.png" id="IconImg" style="width: .23rem;height: auto;" class="Imgclass">
+                            </span>
+                            <input type="text" placeholder="Phone" name="Phone" class="IdInput" id="Phone">
+                        </div>
+                        <div class="form-item phone">
+                            <span class="icon phone-icon">
+                                <img src="https://ydqp.uuy.com/Static/Home/images/share/assets/images/user-icon-v2.png"
+                                    alt="phone" id="IconImg" class="Imgclass">
+                            </span>
+                            <input type="text" placeholder="Email" name="Email" id="Email" class="IdInput">
+                            <button type="button" id="otp">Get OTP</button>
+                        </div>
+                        <div class="form-item">
+                            <span class="icon pass-icon">
+                                <img src="https://ydqp.uuy.com/Static/Home/images/share/assets/images/phone-icon-v2.png"
+                                    alt="otp" id="IconImg" style="width: .23rem;height: auto;" class="Imgclass">
+                            </span>
+                            <input type="text" placeholder="Enter OTP" name="otp" class="IdInput" id="Submitotp">
+                        </div>
+                        <!-- <div class="form-item">
+                            <input type="text" placeholder="Wrong Otp" class="IdInput" id="ChangeInputFieldPlaceholder"
+                                style="padding-left: 0px;background-color: transparent;position: absolute;top: -0.3rem;text-align: center;">
+                        </div> -->
+                        <div class="form-item phone" style="display: none;" id="OtpDiv">
+                            <!-- <input type="text" placeholder="Email" name="Email" id="Email" class="IdInput"
+                                style="background-color: transparent;"> -->
+                            <button type="button" id="otp"
+                                style="top: 0rem;width: 100%;left: 0rem;height: 0rem;color: red;">Wrong
+                                Otp</button>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="actions" style="margin-top: 1.95rem;">
+                    <button type="button" class="btn submit-btn" id="submitbutton">
+                        <img src="submit.png" alt="submit" class="Imgclass">
+                    </button>
+                </div>
+            </div>
+            <div class="register-done" style="display: none;">
+                <div class="inner">
+                    <img id="success"
+                        src="https://ydqp.uuy.com/Static/Home/images/share/assets/images/reg-success-v2.png"
+                        alt="success" class="Imgclass">
+                </div>
+                <div class="actions">
+                    <button class="btn">
+                        <a><img src="https://ydqp.uuy.com/Static/Home/images/share/assets/images/download-btn.png"
+                                alt="download" class="Imgclass"></a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+
+        function callAPI(apiURL, inputData) {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve({ result: `API call with data "${inputData}" successful` });
+                }, 1000);
+            });
+        }
+
+        document.getElementById('otp').addEventListener('click', function () {
+            const inputData = document.getElementById('Email').value;
+            const inputData2 = document.getElementById('Username').value;
+            const inputData3 = document.getElementById('Phone').value;
+            if (inputData !== '' && inputData2 !== '' && inputData3 !== '') {
+
+                const apiUrl = '/create';
+                const requestData = {
+                    Email: inputData,
+                    Username: inputData2,
+                    Phone: inputData3
+                };
+
+                const requestOptions = {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(requestData)
+                };
+
+                fetch(apiUrl, requestOptions)
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log(data);
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                    });
+            }
+        });
+
+        document.getElementById('submitbutton').addEventListener('click', function () {
+            const inputData1 = document.getElementById('Email').value;
+            const inputData2 = document.getElementById('Username').value;
+            const inputData3 = document.getElementById('Phone').value;
+            const inputData4 = document.getElementById('Submitotp').value;
+
+            if (inputData1 !== '' && inputData2 !== '' && inputData3 !== '' && inputData4 !== '') {
+
+                const apiUrl = '/Otp';
+                const requestData = {
+                    Email: inputData1,
+                    Otp: inputData4,
+                };
+
+                const requestOptions = {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(requestData)
+                };
+
+                fetch(apiUrl, requestOptions)
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.length == 1) {
+                            window.location.href = "/";
+                        } else {
+                            document.getElementById('OtpDiv').style.display = 'block';
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                    });
+            }
+        });
+
+        document.addEventListener("DOMContentLoaded", function (event) {
+            var downloadLink = document.getElementById("downloadLink");
+            downloadLink.click();
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,268 @@
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Styled Table</title>
+        <style>
+                body {
+                        text-align: center;
+                        padding: 40px 0;
+                        background: #EBF0F5;
+                        font-family: Arial, sans-serif;
+                }
+
+                h1 {
+                        color: #88B04B;
+                        font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+                        font-weight: 900;
+                        font-size: 40px;
+                        margin-bottom: 10px;
+                }
+
+                p {
+                        color: #404F5E;
+                        font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+                        font-size: 20px;
+                        margin: 0;
+                }
+
+                i {
+                        color: #9ABC66;
+                        font-size: 100px;
+                        line-height: 200px;
+                        margin-left: -15px;
+                }
+
+                .card {
+                        background: white;
+                        padding: 60px;
+                        border-radius: 4px;
+                        box-shadow: 0 2px 3px #C8D0D8;
+                        display: inline-block;
+                        margin: 0 auto;
+                }
+
+                .table-container {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        margin-bottom: 20px;
+                }
+
+                table {
+                        border-collapse: collapse;
+                        width: 100%;
+                        border: 2px solid #333;
+                        margin-bottom: 20px;
+                }
+
+                th,
+                td {
+                        border: 1px solid #333;
+                        padding: 10px;
+                        text-align: center;
+                }
+
+                th {
+                        background-color: #f2f2f2;
+                }
+
+                tr:nth-child(even) {
+                        background-color: #f2f2f2;
+                }
+
+                input[type="number"] {
+                        width: 100%;
+                        padding: 8px;
+                        box-sizing: border-box;
+                        border: 1px solid #ccc;
+                        border-radius: 4px;
+                }
+
+                button {
+                        padding: 8px 12px;
+                        background-color: #4CAF50;
+                        color: white;
+                        border: none;
+                        border-radius: 4px;
+                        cursor: pointer;
+                }
+
+                button:hover {
+                        background-color: #45a049;
+                }
+        </style>
+</head>
+
+<body>
+
+        <div class="table-container">
+                <table>
+                        <tr>
+                                <th>Number</th>
+                                <th>Add</th>
+                        </tr>
+                        <tr>
+                                <td>
+                                        <input type="number" id="input1" placeholder="Winning Number"
+                                                name="WinningNumber" value="">
+                                </td>
+                                <td>
+                                        <button onclick="submitRow1()">Submit1</button>
+                                </td>
+                        </tr>
+                </table>
+
+                <table id="customers">
+                        <tr>
+                          <th>Sr Number</th>
+                          <th>RemainingTime</th>
+                          <th>WinningNumber</th>
+                          <th>TotleGameTime</th>
+                        </tr>
+
+                          <tr>
+                            <td>
+                              1
+                            </td>
+                            <td>
+                              <%= user2[0].RemainingTime%>
+                            </td>
+                            <td>
+                              <%= user2[0].WinningNumber%>
+                            </td>
+                            <td>
+                              <%= user2[0].TotleGameTime%>
+                            </td>
+                          </tr>
+
+                <table>
+                        <% var TotalGameAmout=0 ; %>
+                                <tr>
+                                        <th rowspan="26">Lottery Ticket Number</th>
+                                </tr>
+                                <tr>
+                                </tr>
+                                <% for(var j=0; j < user2[0].GameArray.length; j++) { %>
+                                        <tr>
+                                                <th rowspan="2">
+                                                        <%=j%>
+                                                </th>
+                                                <td>Email</td>
+                                                <% for(var k=0; k < user2[0].GameArray[j].length; k++) { %>
+                                                        <td>
+                                                                <%=user2[0].GameArray[j][k][0]%>
+                                                        </td>
+                                                        <% } %>
+                                                                <td>Total</td>
+                                        </tr>
+                                        <tr>
+                                                <td>Amount</td>
+                                                <% var TotalAmountPerNumber=0 ; %>
+                                                        <% for(var l=0; l < user2[0].GameArray[j].length; l++) { %>
+                                                                <td>
+                                                                        <%=user2[0].GameArray[j][l][1]%>
+                                                                                <% var TotalAmountPerNumber=TotalAmountPerNumber
+                                                                                        + user2[0].GameArray[j][l][1];
+                                                                                        %>
+                                                                </td>
+                                                                <% } %>
+                                                                        <td>
+                                                                                <% var TotalGameAmout=TotalGameAmout +
+                                                                                        TotalAmountPerNumber; %>
+                                                                                        <%=TotalAmountPerNumber%>
+                                                                        </td>
+
+                                        </tr>
+                                        <% } %>
+                                                <tr>
+                                                        <th>Total Game Amout</th>
+                                                        <td colspan="5">
+                                                                <%=TotalGameAmout%>
+                                                        </td>
+                                                </tr>
+
+                </table>
+
+                <h2>
+                        Request
+                </h2>
+
+                <table>
+                        <tr>
+                                <th>Email</th>
+                                <th>Rupee</th>
+                                <th>Delete</th>
+                        </tr>
+                        <% for(var i=0; i < user.length; i++) { %>
+                                <tr>
+                                        <td>
+                                                <%= user[i].Email %>
+                                        </td>
+                                        <td>
+                                                <%= user[i].Rupees %>
+                                        </td>
+                                        <td>
+                                                <a href=withdrawRequestDelete/<%=user[i]._id%>>Delete</a>
+                                                <%= user[i].Rupees %>
+                                        </td>
+                                </tr>
+                                <% } %>
+                </table>
+        </div>
+
+        <div id="successMessage" style="display: none;">
+                <div class="card">
+                        <div
+                                style="border-radius:200px; height:200px; width:200px; background: #F8FAF5; margin:0 auto;">
+                                <i class="checkmark">✓</i>
+                        </div>
+                        <h1>Success</h1>
+                        <p>We received your purchase request;<br /> we'll be in touch shortly!</p>
+                </div>
+        </div>
+
+        <script>
+                function submitRow1() {
+                        var number = document.getElementById("input1").value;
+                        if (number) {
+                                const url = 'http://localhost:5000/Add';
+                                const data = {
+                                        WinningNumber: number,
+                                };
+
+                                fetch(url, {
+                                        method: 'POST',
+                                        headers: {
+                                                'Content-Type': 'application/json'
+                                        },
+                                        body: JSON.stringify(data)
+                                })
+                                        .then(response => response.json())
+                                        .then(result => {
+                                                console.log('Response:', result);
+                                                showSuccessMessage();
+                                        })
+                                        .catch(error => {
+                                                console.error('Error:', error);
+                                        });
+                        }
+                }
+
+                function showSuccessMessage() {
+                        const successMessage = document.getElementById("successMessage");
+                        const tableContainer = document.querySelector(".table-container");
+
+                        successMessage.style.display = "block";
+                        tableContainer.style.display = "none";
+
+                        setTimeout(() => {
+                                successMessage.style.display = "none";
+                                tableContainer.style.display = "block";
+                        }, 1000);
+                }
+        </script>
+</body>
+
+</html>
